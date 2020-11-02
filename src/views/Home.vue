@@ -10,7 +10,7 @@
 export default {
   data: function() {
     return {
-      message: "Goodbye cruel world! See you in heck",
+      message: "Goodbye cruel world! See you in heck! YOU BETTER BELIEVE IT",
     };
   },
   created: function() {},

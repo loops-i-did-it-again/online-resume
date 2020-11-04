@@ -15,7 +15,11 @@ import axios from "axios";
 export default {
   data: function() {
     return {
-      students: [],
+      students: [
+        {first_name: "Jack", last_name: "Conroy", bio: "This is my bio. I'm pretty neat"},
+        {first_name: "Sun", last_name: "Shin", bio: "This is my bio. I'm better than Jack"},
+        {first_name: "Jimmy", last_name: "Wilson", bio: "This is my bio. I'm the absolute best"},
+      ],
     };
   },
   created: function() {

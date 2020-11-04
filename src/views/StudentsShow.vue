@@ -2,10 +2,21 @@
   <div class="students-show">
     {{ student }}
     <h1>{{ student.first_name + " " + student.last_name }}</h1>
+    <img :src="student.photo_url" alt="" />
     <h2>Student Contact Info</h2>
-    <p>{{ student.email }}</p>
-    <p>{{ student.phone_number }}</p>
-    <p>{{ student.bio }}</p>
+    <p>Email: {{ student.email }}</p>
+    <p>Phone Number: {{ student.phone_number }}</p>
+    <p>Bio: {{ student.bio }}</p>
+    <p>LinkedIn: {{ student.linkedin_url }}</p>
+    <p>Twitter: {{ student.twitter_url }}</p>
+    <p>Personal Website: {{ student.personal_url }}</p>
+    <p>Resume: {{ student.resume_url }}</p>
+    <p>Github: {{ student.github_url }}</p>
+    <h2>Capstone</h2>
+    <h3>{{ student.capstone.name }}</h3>
+    <p>Description: {{ student.capstone.description }}</p>
+    <p>{{ student.capstone.capstone_url }}</p>
+    <p>{{ student.capstone.screenshot_url }}</p>
   </div>
 </template>
 
@@ -23,8 +34,8 @@ export default {
         phone_number: "123",
         bio: "West Philidelphia Born and Raised",
         linkedin_url: "linkedin.com/in/sunhanshin/",
-        twitter_url: "twitter.com",
-        personal_url: "sun-shin.github.io",
+        twitter_url: "@sun",
+        personal_url: "sun.com",
         resume_url: "resume.com",
         github_url: "github.com/sun-shin",
         photo_url: "https://picsum.photos/200/300",

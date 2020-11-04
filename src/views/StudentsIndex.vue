@@ -1,8 +1,10 @@
 <template>
   <div class="students-index">
-    <!-- <div v-for="student in students">
-      <h2>{{}}</h2>
-    </div> -->
+    <div v-for="student in students">
+      <img :src="student.photo_url" alt="">
+      <h2>{{student.first_name}} {{student.last_name}}</h2>
+      <p>{{student.bio}}</p>
+    </div>
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="students-show">
     <h1>{{ message }}</h1>
   </div>
 </template>
@@ -11,7 +11,7 @@ import axios from "axios";
 export default {
   data: function() {
     return {
-      message: "Goodbye cruel world! See you in heck! YOU BETTER BELIEVE IT",
+      message: "This is the Students Show page",
     };
   },
   created: function() {},

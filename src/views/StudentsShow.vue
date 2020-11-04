@@ -1,6 +1,6 @@
 <template>
   <div class="students-show">
-    <h1>{{student.}}</h1>
+    <!-- <h1>{{student.}}</h1> -->
   </div>
 </template>
 

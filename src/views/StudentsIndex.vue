@@ -2,7 +2,9 @@
   <div class="students-index">
     <div v-for="student in students">
       <h2>{{student.first_name}} {{student.last_name}}</h2>
-      <img :src="student.photo_url" alt="">
+      <router-link :to="`/students/${student.id}`">
+        <img :src="student.photo_url" alt="">
+      </router-link>
       <p>{{student.bio}}</p> <br> <br>
     </div>
   </div>

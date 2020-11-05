@@ -1,7 +1,7 @@
 <template>
   <div class="students-show">
     <h1>{{ student.first_name + " " + student.last_name }}</h1>
-    <img :src="student.photo_url" alt="">
+    <img :src="student.photo_url" alt="" />
     <h2>Student Contact Info</h2>
     <p>{{ student.email }}</p>
     <p>{{ student.phone_number }}</p>
@@ -14,33 +14,37 @@
 
     <h2>Experience</h2>
     <div v-for="experience in student.experiences">
-      <p>Job Title: {{experience.job_title}}</p>
-      <p>Worked there from {{experience.start_date}} to {{experience.end_date}}</p>
-      <p>Company: {{experience.company_name}}</p>
-      <p>Details: {{experience.details}}</p>
+      <p>Job Title: {{ experience.job_title }}</p>
+      <p>
+        Worked there from {{ experience.start_date }} to
+        {{ experience.end_date }}
+      </p>
+      <p>Company: {{ experience.company_name }}</p>
+      <p>Details: {{ experience.details }}</p>
     </div>
 
     <h2>Education</h2>
     <div v-for="education in student.educations">
-      <p>School: {{education.university}}</p>
-      <p>Dates attended: {{education.start_date}} to {{education.end_date}}</p>
-      <p>Degree: {{education.degree}}</p>
-      <p>{{education.details}}</p>
+      <p>School: {{ education.university }}</p>
+      <p>
+        Dates attended: {{ education.start_date }} to {{ education.end_date }}
+      </p>
+      <p>Degree: {{ education.degree }}</p>
+      <p>{{ education.details }}</p>
     </div>
 
     <h2>Skills</h2>
     <div v-for="skill in student.skills">
-      {{skill.name}}
+      {{ skill.name }}
     </div>
 
     <h2>Capstone Projects</h2>
     <div v-for="capstone in student.capstones">
-      <p>Name: {{capstone.name}}</p>
-      <p>Description: {{capstone.description}}</p>
-      <p>URL: {{capstone.capstone_url}}</p>
-      <img :src="capstone.screenshot_url" alt="">
+      <p>Name: {{ capstone.name }}</p>
+      <p>Description: {{ capstone.description }}</p>
+      <p>URL: {{ capstone.capstone_url }}</p>
+      <img :src="capstone.screenshot_url" alt="" />
     </div>
-    
   </div>
 </template>
 
@@ -87,12 +91,14 @@ export default {
             name: "Vue.js",
           },
         ],
-        capstones: [{
-          name: "Resume-App",
-          description: "created application to view student resumes",
-          capstone_url: "resume-app.com",
-          screenshot_url: "heroku-link.com",
-        }],
+        capstones: [
+          {
+            name: "Resume-App",
+            description: "created application to view student resumes",
+            capstone_url: "resume-app.com",
+            screenshot_url: "heroku-link.com",
+          },
+        ],
       },
     };
   },

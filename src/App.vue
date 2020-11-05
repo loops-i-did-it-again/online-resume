@@ -15,8 +15,9 @@
         </ul>
       </nav>
     </header>
-
+  <div id="wrapper">
     <router-view />
+  </div>  
   </div>
 </template>
 

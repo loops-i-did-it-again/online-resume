@@ -53,6 +53,14 @@
    
 </template>
 
+<template>
+  <twitter>
+    <a class="twitter-timeline" href="https://twitter.com/JasonIsbell"
+      >Tweets</a
+    >
+  </twitter>
+</template>
+
 <style></style>
 
 <script>
@@ -109,7 +117,7 @@ export default {
     };
   },
   created: function() {
-    axios.get(`/api/students/${this.$route.params.id}`).then(response => {
+    axios.get(`/api/students/${this.$route.params.id}`).then((response) => {
       console.log(response.data);
       this.student = response.data;
     });

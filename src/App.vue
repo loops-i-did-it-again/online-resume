@@ -23,28 +23,14 @@
           </ul>
         </nav>
       </header>
-
-      <router-view />
-
-      <footer id="footer">
-        <div class="inner">
-          <section>
-            <h2>Follow</h2>
-            <ul class="icons">
-              <li>
-                <a href="#" class="icon brands style2 fa-twitter"
-                  ><span class="label">Twitter</span></a
-                >
-              </li>
-            </ul>
-          </section>
-          <ul class="copyright">
-            <li>&copy; Untitled. All rights reserved</li>
-            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-          </ul>
-        </div>
-      </footer>
+      <nav id="menu">
+        <h2>Menu</h2>
+        <ul>
+          <li><a href="/students">Student Resumes</a></li>
+        </ul>
+      </nav>
     </div>
+    <router-view />
   </div>
 </template>
 

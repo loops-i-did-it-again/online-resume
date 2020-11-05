@@ -3,6 +3,9 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import StudentsIndex from "../views/StudentsIndex.vue";
 import StudentsShow from "../views/StudentsShow.vue";
+import twitter from 'vue-twitter';
+
+Vue.use(twitter);
 
 Vue.use(VueRouter);
 

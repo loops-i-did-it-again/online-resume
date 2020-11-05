@@ -2,7 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import StudentsIndex from "../views/StudentsIndex.vue";
-import StudentsShow from '../views/StudentsShow.vue';
+import StudentsShow from "../views/StudentsShow.vue";
 
 Vue.use(VueRouter);
 
@@ -13,7 +13,7 @@ const routes = [
     component: Home,
   },
   {
-    path: "/students",
+    path: "/students/:id",
     name: "students-show",
     component: StudentsShow,
   },

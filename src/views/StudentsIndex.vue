@@ -1,17 +1,40 @@
 <template>
-  <div class="students-index">
-    <input type="text" v-model="nameFilter" placeholder="Search by name" list="names">
-    <datalist id="names">
-      <option v-for="student in students">{{student.first_name}} {{student.last_name}}</option>
-    </datalist>
+  <div id="main">
+    <div id="inner">
+      <div class="students-index">
+        <input
+          type="text"
+          v-model="nameFilter"
+          placeholder="Search by name"
+          list="names"
+        />
+        <datalist id="names">
+          <option v-for="student in students"
+            >{{ student.first_name }} {{ student.last_name }}</option
+          >
+        </datalist>
 
-    <div v-for="student in orderBy(
-      filterBy(students, nameFilter, 'last_name', 'first_name'), 'last_name')">
-      <h2>{{student.first_name}} {{student.last_name}}</h2>
-      <router-link :to="`/students/${student.id}`">
-        <img :src="student.photo_url" alt="">
-      </router-link>
-      <p>{{student.bio}}</p> <br> <br>
+        <div
+          v-for="student in orderBy(
+            filterBy(students, nameFilter, 'last_name', 'first_name'),
+            'last_name'
+          )"
+        >
+          <article class="style1">
+            <span class="image">
+              <img src="" alt="" />
+            </span>
+            <a href="generic.html">
+              <h2>{{ student.first_name }} {{ student.last_name }}</h2>
+              <router-link :to="`/students/${student.id}`">
+                <img :src="student.photo_url" alt="" />
+              </router-link>
+              <p>{{ student.bio }}</p>
+              <div class="content"></div>
+            </a>
+          </article>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -20,7 +43,7 @@
 
 <script>
 import axios from "axios";
-import Vue2Filters from 'vue2-filters';
+import Vue2Filters from "vue2-filters";
 
 export default {
   mixins: [Vue2Filters.mixin],
@@ -33,7 +56,7 @@ export default {
       //   {first_name: "Jimmy", last_name: "Wilson", bio: "This is my bio. I'm the absolute best", photo_url: "https://images.unsplash.com/photo-1604160450925-0eecf551fa86?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80"},
       // ],
       students: [],
-      nameFilter: []
+      nameFilter: [],
     };
   },
   created: function() {

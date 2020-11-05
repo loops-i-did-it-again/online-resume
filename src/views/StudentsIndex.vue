@@ -37,7 +37,7 @@ export default {
     };
   },
   created: function() {
-    this.indexStudents;
+    this.indexStudents();
   },
   methods: {
     indexStudents: function() {
